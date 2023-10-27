@@ -23,6 +23,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f6dce9b617.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
+    <style>
+      ol, ul {
+        list-style: none;
+    }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -45,11 +50,34 @@
                         <div class="wpb_wrapper">
                             <?php
                             if (is_home() || is_front_page()) { // Kiểm tra xem bạn đang ở trang chủ
-                                // Sử dụng hàm get_archives để lấy danh sách các bài viết theo thời gian
+                                // // Sử dụng hàm get_archives để lấy danh sách các bài viết theo thời gian
+                                // $args = array(
+                                //     'type' => 'monthly', // Loại archive (có thể là 'monthly', 'yearly', 'daily', và nhiều loại khác)
+                                // );
+                                // $archives = wp_get_archives( $args );
                                 $args = array(
-                                    'type' => 'monthly', // Loại archive (có thể là 'monthly', 'yearly', 'daily', và nhiều loại khác)
+                                    'post_type' => 'post',
+                                    'posts_per_page' => 8
                                 );
-                                $archives = wp_get_archives( $args );
+
+                                // Tạo một truy vấn WP_Query
+                                $query = new WP_Query($args);
+
+                                // kiểm tra có bài viết
+                                if ($query->have_posts()) :
+                                    while ($query->have_posts()) : $query->the_post();
+                                    ?>
+                                <li>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </li>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo 'No posts found.';
+                                endif;
                             }
                             ?>
                         </div>
