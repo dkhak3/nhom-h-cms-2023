@@ -65,7 +65,7 @@ body {
     margin-left: 3px;
 }
 
-.headlines ul>li>.headlinestitles {
+.headlines ul>li>.headlinestitle {
     display: table-cell;
     vertical-align: middle;
     width: 95%;
@@ -155,6 +155,10 @@ body {
 .newsall:focus {
     text-decoration: underline !important;
     background: #62C6C8 !important;
+}
+.newsall:hover {
+    text-decoration: underline;
+    color: #fff;
 }
 
 .news a {
