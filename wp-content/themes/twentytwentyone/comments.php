@@ -27,10 +27,6 @@ if (post_password_required()) {
 
 $twenty_twenty_one_comment_count = get_comments_number();
 ?>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 <div id="comments"
 	class="comments-area default-max-width <?php echo get_option('show_avatars') ? 'show-avatars' : ''; ?>">
@@ -49,7 +45,8 @@ $twenty_twenty_one_comment_count = get_comments_number();
 					esc_html(number_format_i18n($twenty_twenty_one_comment_count))
 				);
 				?>
-    </ol><!-- .comment-list -->
+			<?php endif; ?>
+		</h2><!-- .comments-title -->
 
 		<?php
 		wp_list_comments(
