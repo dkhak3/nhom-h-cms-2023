@@ -75,8 +75,11 @@
 
 	.top-news-block-img img {
 
-		width: unset !important;
-		height: unset !important;
+		/* width: unset !important;
+		height: unset !important; */
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 2048px !important;
 	}
 
 	ul.timeline:before {
