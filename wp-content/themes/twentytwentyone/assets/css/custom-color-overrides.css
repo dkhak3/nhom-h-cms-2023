@@ -230,15 +230,22 @@ body {
   color: #428bca !important;
   text-decoration: none !important;
 }
-section {
-  padding: 0 0 !important;
-}
-button {
+
+/* button {
   background-color: #007bff !important;
   color: white !important;
-}
+} */
 .site textarea {
   border: 1px solid #ced4da !important;
   border-radius: 0.25rem !important;
   margin: 0 0 !important;
+}
+
+.model-7 {
+  font-size: 0.8em !important;
+  width: 15% !important;
+  min-width: 55px !important;
+  display: table-cell !important;
+  vertical-align: middle !important;
+  padding-top: 11px !important;
 }

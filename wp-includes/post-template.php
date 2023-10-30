@@ -537,7 +537,7 @@ function get_post_class( $css_class = '', $post = null ) {
 
 	// Post thumbnails.
 	if ( current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $post->ID ) && ! is_attachment( $post ) && ! $post_password_required ) {
-		$classes[] = 'has-post-thumbnail';
+		$classes[] = 'has-post-thumbnail container col-md-4';
 	}
 
 	// Sticky for Sticky Posts.

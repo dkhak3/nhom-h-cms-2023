@@ -2854,7 +2854,7 @@ function get_the_post_navigation($args = array())
 	$next_post = get_next_post();
 
 	if ($previous_post || $next_post) {
-		$output = '<div class="row"><div class="col-md-3"></div>';
+		$output = '<div class="row container"><div class="col-md-3"></div>';
 		$output .= '<div class="col-md-6">';
 		$output .= '<div class="recentpost">';
 		$output .= '<div class="headlines text-dark" style="background-color: white !important;">';
@@ -2862,14 +2862,14 @@ function get_the_post_navigation($args = array())
 
 		if ($previous_post) {
 			$output .= '<li>';
-			$output .= '<div class="headlinesdate">';
+			$output .= '<div class="headlinesdate model-7" style="color: #000 !important;">';
 			$output .= '<div class="headlinesdm">';
 			$output .= '<div class="headlinesday border-bottom">' . get_the_time('d', $previous_post) . '</div>';
 			$output .= '<div class="headlinesmonth">' . get_the_time('m', $previous_post) . '</div>';
 			$output .= '</div>';
 			$output .= '<div class="headlinesyear">' . get_the_time('Y', $previous_post) . '</div>';
 			$output .= '</div>';
-			$output .= '<div class="headlinestitle text-dark">';
+			$output .= '<div class="headlinestitle  text-dark">';
 			$output .= '<a class="text-dark" href="' . get_permalink($previous_post) . '">' . get_the_title($previous_post) . '</a>';
 			$output .= '</div>';
 			$output .= '</li>';
@@ -2877,7 +2877,7 @@ function get_the_post_navigation($args = array())
 
 		if ($next_post) {
 			$output .= '<li>';
-			$output .= '<div class="headlinesdate">';
+			$output .= '<div class="headlinesdate model-7" style="color: #000 !important;">';
 			$output .= '<div class="headlinesdm">';
 			$output .= '<div class="headlinesday border-bottom">' . get_the_time('d', $next_post) . '</div>';
 			$output .= '<div class="headlinesmonth">' . get_the_time('m', $next_post) . '</div>';
