@@ -238,7 +238,6 @@ body {
                 <div class="row title">
                     <div class="col-md-10 col-xs-9">
                         <?php the_title('<h1 class="entry-title font-weight-bold m-0 p-0" style="font-size: 2.1em">', '</h1>'); ?>
-                        <?php twenty_twenty_one_post_thumbnail(); ?>
                     </div>
                     <div class="col-md-2 col-xs-3">
                             <div class="headlinesdate" id="date-title-module-6">
